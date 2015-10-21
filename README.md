@@ -9,11 +9,6 @@ git clone https://github.com/mauri870/laravel5-express-blog.git
 composer install
 ```
 
-### Update dependencies
-```
-composer install
-```
-
 ### Create sqlite database
 ```
 touch database/database.sqlite
