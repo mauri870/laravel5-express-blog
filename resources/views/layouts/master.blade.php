@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <title>{{ $title }}</title>
+    <title>@yield('title')</title>
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"
@@ -49,10 +49,10 @@
                     <a href="{{ route('blog.index') }}">Home</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog.about') }}">About</a>
+                    <a href="">About</a>
                 </li>
                 <li>
-                    <a href="{{ route('blog.contact') }}">Contact</a>
+                    <a href="">Contact</a>
                 </li>
             </ul>
         </div>
@@ -63,7 +63,7 @@
 
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" style="background-image: url('{{ Module::asset('blog:img/home-bg.jpg') }}')">
+<header class="intro-header" style="background-image: url('{{ asset('img/home-bg.jpg') }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -117,12 +117,12 @@
 </footer>
 
 <!-- jQuery -->
-<script src="{{ Module::asset('blog:js/jquery.js') }}"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ Module::asset('blog:js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ Module::asset('blog:js/clean-blog.js') }}"></script>
+<script src="{{ asset('js/clean-blog.js') }}"></script>
 </body>
 </html>
