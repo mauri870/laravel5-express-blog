@@ -2,19 +2,26 @@
 
 namespace App\Http\Controllers\Blog;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
-    public function __construct()
-    {
+    /**
+     * @var Post
+     */
+    public $posts;
 
+    public function __construct(Post $post)
+    {
+        $this->posts = $post;
     }
 
     public function index()
     {
-        return view('index');
+        $posts = $this->posts->with('users')->paginate(10);
+        return view('index')->with('posts',$posts);
     }
 }
