@@ -25,3 +25,7 @@ DB_CONNECTION=sqlite
 ```
 php artisan migrate --seed
 ```
+### Generate app key
+```
+php artisan key:generate
+```
