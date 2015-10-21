@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['namespace' => 'Blog'], function () {
+    Route::get('/', 'PagesController@index');
 });
