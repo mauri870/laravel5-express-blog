@@ -21,7 +21,7 @@ cp .env.example .env
 DB_CONNECTION=sqlite
 ```
 
-### Create sqlite database
+### Run Migrations and Seeders
 ```
 php artisan migrate --seed
 ```
