@@ -20,6 +20,9 @@ class DatabaseSeeder extends Seeder
         //Faker generate random posts
         factory(App\Post::class,20)->create();
 
+        //Faker generate random comments
+        factory(App\Comment::class,100)->create();
+
         // $this->call(UserTableSeeder::class);
 
         Model::reguard();
