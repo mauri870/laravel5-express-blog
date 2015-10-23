@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="Digitalserra Tecnologia Digital">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/clean-blog.css') }}">
     <title>@yield('title')</title>
 
     <!-- Custom Fonts -->
