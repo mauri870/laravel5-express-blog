@@ -26,10 +26,10 @@ class PagesController extends Controller
         return view('blog.index')->with('posts',$posts);
     }
 
-    public function post($id)
+    public function post($slug)
     {
-        $post = $this->posts->with('users')->find($id);
-        $comments = Comment::with('users')->where('post_id','=',$id)->orderBy('id','desc')->get();
+        $post = $this->posts->with('users')->where('slug','=',$slug)->first();
+        $comments = Comment::with('users')->where('post_id','=',$post->id)->orderBy('id','desc')->get();
         return view('blog.post')
             ->with('post',$post)
             ->with('comments',$comments);
