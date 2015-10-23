@@ -13,4 +13,5 @@
 
 Route::group(['namespace' => 'Blog'], function () {
     Route::get('/', ['as'=>'blog.index', 'uses'=>'PagesController@index']);
+    Route::get('/posts/{id}', ['as'=>'blog.post', 'uses'=>'PagesController@post']);
 });
