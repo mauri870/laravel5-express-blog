@@ -1,3 +1,9 @@
+###Steps to push
+```
+git remote set-url origin remote_repo_url
+git add .
+git push origin master
+```
 ## Instructions
 ### Clone
 ```
